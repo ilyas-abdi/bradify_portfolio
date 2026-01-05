@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brandify Design System - Professional & Elegant */
+
+@layer base {
+  :root {
+    /* Deep navy primary, blue accent, cool neutrals */
+    --background: 40 33% 98%;
+    --foreground: 220 43% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 43% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 43% 11%;
+
+    --primary: 220 43% 23%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 40 33% 96%;
+    --secondary-foreground: 220 43% 23%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 200 80% 60;
+    --accent-foreground: 220 43% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 43% 23%;
+
+    --radius: 0.75rem;
+
+    /* Custom Brandify tokens */
+    --blue: 200 80% 60;
+    --blue-light: 200 80% 70;
+    --blue-dark: 200 80% 45;
+    --navy: 220 43% 23%;
+    --navy-light: 220 43% 35%;
+    --navy-dark: 220 43% 11%;
+  }
+
+  .dark {
+    --background: 220 43% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 43% 11%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 43% 11%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 40 60% 55%;
+    --primary-foreground: 220 43% 8%;
+
+    --secondary: 220 43% 15%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 200 80% 60;
+    --accent-foreground: 220 43% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 200 80% 60;
+
+    --blue: 200 80% 60;
+    --blue-light: 200 80% 70;
+    --blue-dark: 200 80% 45;
+    --navy: 220 43% 23%;
+    --navy-light: 220 43% 35%;
+    --navy-dark: 220 43% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .glass {
+    @apply bg-background/80 backdrop-blur-md;
+  }
+}
